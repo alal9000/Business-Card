@@ -77,7 +77,7 @@ fun BusinessCard() {
         IconList(
             modifier = Modifier
                 .align(Alignment.BottomCenter) // Place at the bottom center
-                .padding(bottom = 16.dp) // Add padding from the bottom edge
+                .padding(bottom = 32.dp) // Add padding from the bottom edge
         )
     }
 }
@@ -104,11 +104,13 @@ fun Hero(fname: String, title: String, modifier: Modifier = Modifier) {
         }
         Text(
             text = fname,
-            fontSize = 24.sp
+            fontSize = 24.sp,
+            modifier = Modifier.padding(top = 16.dp)
+
         )
         Text(
             text = title,
-            modifier = modifier,
+            modifier = Modifier.padding(top = 16.dp),
             color = Color(0xFF3ddc84),
             fontWeight = FontWeight.Bold
         )
@@ -140,14 +142,16 @@ fun IconListItem(title: String, icon: ImageVector) {
         Icon(
             imageVector = icon,
             contentDescription = null,
-            modifier = Modifier.size(24.dp),
+            modifier = Modifier
+                .size(24.dp),
             tint = Color(0xFF3ddc84) // Same color as the title for consistency
         )
         Text(
             text = title,
             fontSize = 16.sp,
             color = Color.Black,
-            textAlign = TextAlign.Center
+            textAlign = TextAlign.Center,
+            modifier = Modifier.padding(start = 5.dp)
 
         )
     }
